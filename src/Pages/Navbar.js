@@ -1,7 +1,6 @@
 
-import React from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState } from 'react';
+import { Link, NavLink} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { adminAction, userAction } from '../Store/index.js';
 
@@ -12,6 +11,7 @@ function Navbar() {
     const logout = (isAdmin) => {
         dispatch(isAdmin ? adminAction.logout() : userAction.logout())
     }
+
     return (
         <div>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -41,7 +41,7 @@ function Navbar() {
                         {isAdminLoggedIn && (
                             <>
                                 <form class="d-flex" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                                     <button class="btn btn-outline-success" type="submit">Search</button>
                                     <NavLink to={'/'}><button className='btn btn-outline-success ml-2' onClick={() => logout(false)}>Logout</button></NavLink>
                                 </form>
