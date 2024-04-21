@@ -22,8 +22,8 @@ function UserLogin() {
      const registerPromise = userLogin(values);
      toast.promise(registerPromise,{
       loading:'creating....',
-      success: <b>Register successfully</b>,
-      error: <b>Couldnt Register</b>
+      success: <b>Login successful</b>,
+      error: <b>email or password error</b>
 
      }).then(() => { 
         navigate('/userprofile');
