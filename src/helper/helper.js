@@ -4,7 +4,7 @@ import axios from 'axios';
 
 /** register user function */
 export async function registerUser(credentials){
-    const data  = await axios.post(`http://localhost:5000/api/user/register`,{
+    const data  = await axios.post(`https://startoon-server-vbz8.onrender.com/api/user/register`,{
          name:credentials.name,
          email:credentials.email,
          password:credentials.password,
@@ -16,7 +16,7 @@ export async function registerUser(credentials){
 
 
 export async function userLogin(credentials){
-    const data  = await axios.post(`http://localhost:5000/api/user/login`,{
+    const data  = await axios.post(`https://startoon-server-vbz8.onrender.com/api/user/login`,{
          EmailOrName:credentials.EmailOrName,
          password:credentials.password,
       }).catch((err)=>console.log(err))  
@@ -26,7 +26,7 @@ export async function userLogin(credentials){
 }
 
 export async function adminLogin(credentials){
-    const data  = await axios.post(`http://localhost:5000/api/admin/login`,{
+    const data  = await axios.post(`https://startoon-server-vbz8.onrender.com/api/admin/login`,{
          email:credentials.email,
          password:credentials.password,
       }).catch((err)=>console.log(err))  

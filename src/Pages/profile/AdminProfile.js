@@ -11,7 +11,7 @@ function AdminProfile() {
     const [currentPage, setCurrentPage] = useState(0);
     const usersPerPage = 10;
     useEffect(() => {
-        axios.get('http://localhost:5000/api/admin/getalluser')
+        axios.get('https://startoon-server-vbz8.onrender.com/api/admin/getalluser')
         .then(response => {
             console.log(response.data)
             setAdmin(response.data);

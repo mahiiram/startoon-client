@@ -10,7 +10,7 @@ function UserProfile() {
 
     useEffect(() => {
         const token = localStorage.getItem('token'); 
-        axios.get('http://localhost:5000/api/getuser', {
+        axios.get('https://startoon-server-vbz8.onrender.com/api/getuser', {
             headers: {
                 Authorization: `Bearer ${token}`
             }
