@@ -34,37 +34,9 @@ function AdminProfile() {
   return (
     <div>
         <Navbar />
-       {/* <div className='m-2'>
-       {admin && (
-        <table className="table table-dark table-striped-columns">
-          <thead>
-            <tr>
-              <th scope="col">S.No</th>
-              <th scope="col">Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Gender</th>
-              <th scope="col">Count</th>
-              <th scope="col">Last Login Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            {admin.map((user, index) => (
-            <tr key={user.id}>
-            <th scope="row">{index + 1}</th>
-            <td>{user.name}</td>
-            <td>{user.email}</td>
-            <td>{user.gender}</td>
-            <td>{user.count}</td>
-            <td>{formatDate(user.lastLoginDate)}</td>
-          </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-       </div> */}
        <div>
       {admin && (
-        <div>
+        <div className='m-4'>
           <table className="table table-dark table-striped-columns">
             <thead>
               <tr>
