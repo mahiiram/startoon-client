@@ -8,6 +8,7 @@ import UserProfile from "./Pages/profile/UserProfile.js";
 import { AuthorizeUser } from "./middleware/auth.js";
 import { useSelector } from "react-redux";
 import AdminProfile from "./Pages/profile/AdminProfile.js";
+import Admincharts from "./Pages/profile/Admincharts.js";
 const router = createBrowserRouter([
   {
     path:"/",
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path:"/adminprofile",
     element:<AuthorizeUser><AdminProfile /></AuthorizeUser>
+  },
+  {
+    path:"/graphchart",
+    element:<AuthorizeUser><Admincharts /></AuthorizeUser>
   }
 ])
 
