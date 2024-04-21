@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path:"/userprofile",
-    element:<ProtectRoute><UserProfile /></ProtectRoute>
+    element:<AuthorizeUser><UserProfile /></AuthorizeUser>
   },
   {
     path:"/adminprofile",
