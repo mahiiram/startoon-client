@@ -9,7 +9,7 @@ const CustomTooltip = ({ active, payload, label }) => {
     if (active) {
         return (
             <div className="custom-tooltip">
-                <p className="label">{`Email: ${label}`}</p>
+                <p className="label">{`year: ${label}`}</p>
                 <p className="desc">{`Count: ${payload[0].value}`}</p>
             </div>
         );
