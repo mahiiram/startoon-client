@@ -14,48 +14,6 @@ function Navbar() {
     }
     return (
         <div>
-            {/* <nav className="navbar navbar-dark bg-dark p-1">
-                <div className="container-fluid">
-                    {isUserLoggedIn && (
-                        <>
-                            <NavLink to={'/'}><h1 style={{ textDecoration: 'none', color: '#f5bf42' }}>Profile</h1></NavLink>
-                        </>
-                    )}
-                    {isAdminLoggedIn && (
-                        <>
-                            <NavLink to={'/'}><h1 style={{ textDecoration: 'none', color: '#f5bf42' }}>Profile</h1></NavLink>
-                            <NavLink to={'/graphchart'}>
-                                <button className="btn btn-outline-success" type="button">Graph</button>
-                            </NavLink>
-
-                        </>
-                    )}
-                    <div className="d-grid gap-1 d-md-block">
-                        {isUserLoggedIn && (
-                            <>
-                                <NavLink to={'/'}><h1 style={{ textDecoration: 'none', color: '#f5bf42' }} onClick={() => logout(false)}>Logout</h1></NavLink>
-                            </>
-                        )}
-                        {isAdminLoggedIn && (
-                            <>
-                                <form class="d-flex" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                                        <button class="btn btn-outline-success" type="submit">Search</button>
-                                </form>
-                            </>
-                        )}
-                        {isAdminLoggedIn && (
-                            <>
-                          <NavLink to={'/'}><button className='btn btn-outline-success' onClick={() => logout(false)}>Logout</button></NavLink>
-                            </>
-                        )}
-                         
-                    </div>
-
-                </div>
-            </nav> */}
-
-
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                     <Link class="navbar-brand" to={'/'}>Profile</Link>
