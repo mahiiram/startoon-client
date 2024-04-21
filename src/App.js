@@ -5,7 +5,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from "./Pages/Home.js";
 import UserRegister from "./Components/User/Register.js";
 import UserProfile from "./Pages/profile/UserProfile.js";
-import { AuthorizeUser } from "./middleware/auth.js";
+import { AuthorizeUser, ProtectRoute } from "./middleware/auth.js";
 import { useSelector } from "react-redux";
 import AdminProfile from "./Pages/profile/AdminProfile.js";
 import Admincharts from "./Pages/profile/Admincharts.js";
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path:"/userprofile",
-    element:<AuthorizeUser><UserProfile /></AuthorizeUser>
+    element:<ProtectRoute><UserProfile /></ProtectRoute>
   },
   {
     path:"/adminprofile",

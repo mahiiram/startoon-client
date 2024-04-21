@@ -11,6 +11,7 @@ export async function registerUser(credentials){
          gender:credentials.gender
       }).catch((err)=>console.log(err))   
       console.log(data)
+      localStorage.setItem('token',data.data.token)
       return Promise.resolve(data.message)
 }
 

@@ -14,7 +14,10 @@ export const AuthorizeUser = ({ children }) => {
 
 export const ProtectRoute = ({ children }) => {
     const email = localStorage.getItem('email')
+    const emailorname = localStorage.getItem('emailorname')
     if(!email){
+        return <Navigate to={'/'} replace={true}></Navigate>
+    }else if(!emailorname){
         return <Navigate to={'/'} replace={true}></Navigate>
     }
     return children;

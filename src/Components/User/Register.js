@@ -24,12 +24,12 @@ function UserRegister() {
              const registerPromise = registerUser(values);
              toast.promise(registerPromise,{
               loading:'creating....',
-              success: <b>OTP sent successfully</b>,
+              success: <b>user register successfully</b>,
               error: <b>Couldnt Register</b>
              })
             console.log(values);
             localStorage.setItem('email', values.email)
-            registerPromise.then(function () { navigate('/userprofile') })
+            registerPromise.then(function () {navigate('/userprofile') })
         }
 
     })
