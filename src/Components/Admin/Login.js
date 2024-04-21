@@ -51,6 +51,10 @@ function AdminLogin() {
             <input {...formik.getFieldProps('password')} placeholder='Enter Password' type="password" className="form-control"/>
             <div id="emailHelp" className="form-text">We'll never share your password with anyone else.</div>
           </div>
+          <div className="mb-3 textAlign-center">
+               <p>EmailId:<span> admin@email.com</span></p>
+               <p>Password:<span> Admin@123</span></p>
+          </div>
           <div className='button-div'>
           <button type="submit" className="btn btn-primary" >Login</button>
           </div>

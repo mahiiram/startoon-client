@@ -25,14 +25,10 @@ function UserLogin() {
       success: <b>Register successfully</b>,
       error: <b>Couldnt Register</b>
 
-     }).then(() => {
-        
+     }).then(() => { 
         navigate('/userprofile');
         localStorage.setItem('emailorname',values.EmailOrName)
-      }).catch((error) => {
-        console.error(error);
-        toast.error('An error occurred during login.');
-      });
+      })
       console.log(values)
     }
     

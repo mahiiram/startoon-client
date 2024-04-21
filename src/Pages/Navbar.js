@@ -56,42 +56,44 @@ function Navbar() {
             </nav> */}
 
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <Link class="navbar-brand" to={'/'}>Profile</Link>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <Link class="navbar-brand" to={'/'}>Profile</Link>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-        
-      {isAdminLoggedIn && (
-                        <>
-                        <li class="nav-item">
-          <Link class="nav-link active" aria-current="page" to={'/graphchart'}><button className="btn btn-outline-success" type="button">Graph</button></Link>
-        </li>
-        </>
-                    )}
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-        {isUserLoggedIn && (
+
+                            {isAdminLoggedIn && (
+                                <>
+                                    <li class="nav-item">
+                                        <Link class="nav-link active" aria-current="page" to={'/graphchart'}><button className="btn btn-outline-success" type="button">Graph</button></Link>
+                                    </li>
+                                </>
+                            )}
+                        </ul>
+
+                        {isUserLoggedIn && (
                             <>
-                                <NavLink to={'/'}><h1 style={{ textDecoration: 'none', color: '#f5bf42' }} onClick={() => logout(false)}>Logout</h1></NavLink>
-                            </>
-        )}
-        {isAdminLoggedIn && (
-                            <>
-                          <NavLink to={'/'}><button className='btn btn-outline-success ml-2' onClick={() => logout(false)}>Logout</button></NavLink>
+                                <NavLink to={'/'}><button className='btn btn-outline-success ml-2' onClick={() => logout(false)}>Logout</button></NavLink>
                             </>
                         )}
-      </form>
+                        {isAdminLoggedIn && (
+                            <>
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                    <NavLink to={'/'}><button className='btn btn-outline-success ml-2' onClick={() => logout(false)}>Logout</button></NavLink>
+                                </form>
+                            </>
+                        )}
 
-    </div>
-  </div>
-</nav>
+
+                    </div>
+                </div>
+            </nav>
         </div>
     )
 }
