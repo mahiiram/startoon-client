@@ -53,3 +53,10 @@ a{
   justify-content: center;
   margin-top: 25px;
 }
+
+.userprofile{
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
